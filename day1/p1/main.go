@@ -1,4 +1,4 @@
-package problems
+package main
 
 import (
 	"bufio"
@@ -10,9 +10,6 @@ import (
 	"strconv"
 	"strings"
 )
-
-type Day1 struct {
-}
 
 // An Item is something we manage in a priority queue.
 type Item struct {
@@ -55,11 +52,11 @@ func (pq *PriorityQueue) Pop() any {
 	return item
 }
 
-func (Day1 *Day1) RunAndPrint() {
+func main() {
 	pq1 := make(PriorityQueue, 1000) // 1k in
 	pq2 := make(PriorityQueue, 1000)
 
-	input_file, err := os.Open("problems/day1_input.txt")
+	input_file, err := os.Open("day1_input.txt")
 
 	if err != nil {
 		fmt.Println("Error reading file")
