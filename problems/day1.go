@@ -55,7 +55,7 @@ func (pq *PriorityQueue) Pop() any {
 	return item
 }
 
-func parse_input() {
+func (Day1 *Day1) RunAndPrint() {
 	pq1 := make(PriorityQueue, 1000) // 1k in
 	pq2 := make(PriorityQueue, 1000)
 
@@ -113,9 +113,4 @@ func parse_input() {
 
 	fmt.Println("Sol: ")
 	fmt.Printf("%f\n", solution)
-
-}
-
-func (Day1 *Day1) RunAndPrint() {
-	parse_input()
 }
